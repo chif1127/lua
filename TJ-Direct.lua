@@ -55,7 +55,7 @@ function wa_lua_on_handshake_cb(ctx)
 
         res = 'CONNECT ' .. host .. ':' .. port ..'@a.189.cn:80 HTTP/1.1\r\n' ..
                     'Host: a.189.cn:80\r\n' ..
-                    'User-Agent: okhttp/4.9.0 Dalvik/2.1.0 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.3 Safari/605.1.15 baiduboxapp/11.0.5.12 (Baidu; P1 11)\r\n'..
+                    'User-Agent: baiduboxapp/11.0.5.12 (Baidu; P1 11)\r\n'..
                     'Proxy-Connection: Keep-Alive\r\n'..
                     'X-T5-Auth: ZjQxNDld\r\n\r\n'
           
@@ -94,7 +94,6 @@ function wa_lua_on_write_cb(ctx, buf)
             buf = method .. sub(rest, 0, e) .. 
             'X-Online-Host:\t\t ' .. host ..'\r\n' ..
             '\tHost: a.189.cn:80\r\n'..
-            'User-Agent: okhttp/4.9.0 Dalvik/2.1.0 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.3 Safari/605.1.15 baiduboxapp/11.0.5.12 (Baidu; P1 11)\r\n'..
             'X-T5-Auth: ZjQxNDld\r\n' ..
             sub(rest, e + 1)
             
