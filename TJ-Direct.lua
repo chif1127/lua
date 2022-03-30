@@ -55,9 +55,9 @@ function wa_lua_on_handshake_cb(ctx)
 
         res = 'CONNECT ' .. host .. ':' .. port ..'@a.189.cn:80 HTTP/1.1\r\n' ..
                     'Host: a.189.cn:80\r\n' ..
-                    'User-Agent: baiduboxapp/11.0.5.12 (Baidu; P1 11)\r\n'..
                     'Proxy-Connection: Keep-Alive\r\n'..
-                    'X-T5-Auth: ZjQxNDld\r\n\r\n'
+                    'User-Agent: okhttp/4.9.0 Dalvik/2.1.0 baiduboxapp/11.0.5.12 (Baidu; P1 11)\r\n'..
+                    'X-T5-Auth: YTY0Nzlk\r\n\r\n'
           
         ctx_write(ctx, res)
         flags[uuid] = kHttpHeaderSent
@@ -93,8 +93,9 @@ function wa_lua_on_write_cb(ctx, buf)
 
             buf = method .. sub(rest, 0, e) .. 
             'X-Online-Host:\t\t ' .. host ..'\r\n' ..
+            'User-Agent: okhttp/4.9.0 Dalvik/2.1.0 baiduboxapp/11.0.5.12 (Baidu; P1 11)\r\n'..
             '\tHost: a.189.cn:80\r\n'..
-            'X-T5-Auth: ZjQxNDld\r\n' ..
+            'X-T5-Auth: YTY0Nzlk\r\n' ..
             sub(rest, e + 1)
             
     end
